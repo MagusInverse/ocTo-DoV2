@@ -1,13 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blonk-Menu
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<br>
+<br>
 <ion-content [fullscreen]="true">
-  <ion-button fill="outline" expand="block" [routerLink]="['/pendientes']">To-Do</ion-button>
-  <ion-button fill="outline" expand="block" (click)="listado()">Listado</ion-button>
-  <ion-button fill="outline" expand="block" [routerLink]="['/mapa']">Mapa</ion-button>
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
+  <br>
+  <br>
+  <ion-button size="large" fill="outline" expand="block" [routerLink]="['/pendientes']">Tareas Pendientes</ion-button>
+  <br>
+  <ion-button size="large" fill="outline" expand="block" (click)="listado()">Lista del Supermercado</ion-button>
+  <br>
+  <ion-button size="large" fill="outline" expand="block" [routerLink]="['/mapa']">Buscar Supermercados</ion-button>
 </ion-content>

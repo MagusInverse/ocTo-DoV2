@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>To-Do</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<br>
 <ion-content [fullscreen]="true">
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
   <ion-card>
     <ion-card-header>
-      <ion-card-title class="ion-text-center">Tareas</ion-card-title>
+      <ion-card-title class="ion-text-center fuentes-cards">Tareas</ion-card-title>
+      <ion-card-subtitle class="ion-text-center fuentes-cards"> Aqui registra tus tareas por hacer</ion-card-subtitle>
     </ion-card-header>
       <ion-card-content>
       <ion-list>
 <ion-item-sliding *ngFor="let x of arregloTareas">
   <ion-item>
     <ion-label>
-      {{ x.titulo }} - {{ x.detalle }}
+      <h2 class="fuentes-cards">Titulo: {{ x.titulo }}</h2>
+      <p class="fuentes-cards">Detalle: {{ x.detalle }}</p>
     </ion-label>
   </ion-item>
   <ion-item-options>
@@ -30,6 +28,6 @@
       </ion-card-content>
   </ion-card>
 
-  <ion-button fill="outline" expand="block" [routerLink]="['/agregar-tarea']">Agregar nueva Tarea</ion-button>
-  <ion-button fill="outline" expand="block" [routerLink]="['/home']">Atrás</ion-button>
+  <ion-button size="large" fill="outline" expand="block" [routerLink]="['/agregar-tarea']">Agregar nueva Tarea</ion-button>
+  <ion-button size="large" fill="outline" expand="block" [routerLink]="['/home']">Atrás</ion-button>
 </ion-content>

@@ -1,10 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>listadoProductos</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<br>
 <ion-content [fullscreen]="true">
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
   <ion-card>
     <ion-card-header>
       <ion-card-title class="ion-text-center">Productos</ion-card-title>
@@ -14,7 +10,10 @@
 <ion-item-sliding *ngFor="let x of arregloProductos">
   <ion-item>
     <ion-label>
-      {{ x.id }} - {{ x.nombre }} - {{ x.detalle }} - {{ x.cantidad }}
+      <p>Id : {{ x.id }}</p>
+      <p>Nombre : {{ x.nombre }}</p>
+      <p>Detalle : {{ x.detalle }}</p>
+      <p>Cantidad : {{ x.cantidad }}</p>
     </ion-label>
   </ion-item>
   <ion-item-options>
