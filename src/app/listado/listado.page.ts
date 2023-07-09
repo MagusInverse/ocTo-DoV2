@@ -35,13 +35,13 @@ export class ListadoPage implements OnInit {
   }
 
   ngOnInit() {
-    /*
+    
     this.servicioBD.dbState().subscribe(respuestaBD =>{
       if(respuestaBD){
         this.servicioBD.fetchProducto().subscribe(itemBD=>{
           this.arregloProductos = itemBD;
         })
       }
-    })*/
+    })
   }
 }

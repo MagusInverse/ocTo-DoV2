@@ -33,14 +33,14 @@ export class PendientesPage implements OnInit {
   }
 
   ngOnInit() {
-    /*
+    
     this.servicioBD.dbState().subscribe(respuestaBD =>{
       if(respuestaBD){
-        this.servicioBD.fetchProducto().subscribe(itemBD=>{
+        this.servicioBD.fetchTarea().subscribe(itemBD=>{
           this.arregloTareas = itemBD;
         })
       }
     })
-    */
+    
   }
 }

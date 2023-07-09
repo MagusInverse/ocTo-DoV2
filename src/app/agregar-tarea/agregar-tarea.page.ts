@@ -17,7 +17,7 @@ export class AgregarTareaPage implements OnInit {
   agregar(){
     this.servicioBD.insertarTarea(this.titulo, this.detalle);
     this.servicioBD.presentToast("Tarea ingresada correctamente");
-    this.router.navigate(['/pendiente']);
+    this.router.navigate(['/pendientes']);
   }
 
   ngOnInit() {
