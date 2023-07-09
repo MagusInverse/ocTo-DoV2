@@ -1,32 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Ingresar un nuevo Producto</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<br>
 <ion-content [fullscreen]="true">
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
   <ion-card>
     <ion-card-header>
-      <ion-card-title class="ion-text-center">Ingrese campos de producto</ion-card-title>
+      <ion-card-title class="ion-text-center fuentes-cards">Ingrese campos de producto</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-label position="floating" class="labels"><ion-icon name="receipt-outline"></ion-icon>Nombre</ion-label>
+        <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="receipt-outline"></ion-icon>Nombre</ion-label>
         <ion-input type="text" [(ngModel)]="nombre"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating" class="labels"><ion-icon name="receipt-outline"></ion-icon>Detalle</ion-label>
+        <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="receipt-outline"></ion-icon>Detalle</ion-label>
         <ion-input type="text" [(ngModel)]="detalle"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating" class="labels"><ion-icon name="receipt-outline"></ion-icon>Cantidad</ion-label>
+        <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="receipt-outline"></ion-icon>Cantidad</ion-label>
         <ion-input type="number" [(ngModel)]="cantidad"></ion-input>
       </ion-item>
     </ion-card-content>
     <br>
-    <ion-button  expand="block" color="dark" class="labels" (click)="agregar()"><ion-icon name="checkmark-done-outline"></ion-icon></ion-button>
-    <ion-button  expand="block" color="dark" class="labels"  [routerLink]="['/listado']"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+    <ion-button  size="large" expand="block" class="labels fuentes-cards" (click)="agregar()"><ion-icon name="checkmark-done-outline"></ion-icon></ion-button>
+    <ion-button  size="large" expand="block" class="labels fuentes-cards"  [routerLink]="['/listado']"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
   </ion-card>
 </ion-content>

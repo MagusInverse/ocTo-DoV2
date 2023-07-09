@@ -1,27 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Ingresar una nueva Tarea</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
   <ion-card>
     <ion-card-header>
-      <ion-card-title class="ion-text-center">Ingrese Tarea</ion-card-title>
+      <ion-card-title class="ion-text-center fuentes-cards">Ingrese Tarea</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-label position="floating" class="labels"><ion-icon name="receipt-outline"></ion-icon>Titulo</ion-label>
+        <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="receipt-outline"></ion-icon>Titulo</ion-label>
         <ion-input type="text" [(ngModel)]="titulo"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating" class="labels"><ion-icon name="receipt-outline"></ion-icon>Detalle</ion-label>
+        <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="receipt-outline"></ion-icon>Detalle</ion-label>
         <ion-input type="text" [(ngModel)]="detalle"></ion-input>
       </ion-item>
     </ion-card-content>
     <br>
-    <ion-button  expand="block" color="dark" class="labels" (click)="agregar()"><ion-icon name="checkmark-done-outline"></ion-icon></ion-button>
-    <ion-button  expand="block" color="dark" class="labels"  [routerLink]="['/pendientes']"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+    <ion-button  size="large" expand="block" class="labels fuentes-cards" (click)="agregar()"><ion-icon name="checkmark-done-outline"></ion-icon></ion-button>
+    <ion-button  size="large" expand="block" class="labels fuentes-cards"  [routerLink]="['/pendientes']"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
   </ion-card>
 </ion-content>

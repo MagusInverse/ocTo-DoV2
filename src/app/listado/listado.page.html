@@ -3,17 +3,17 @@
   <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
   <ion-card>
     <ion-card-header>
-      <ion-card-title class="ion-text-center">Productos</ion-card-title>
+      <ion-card-title class="ion-text-center fuentes-cards">Productos</ion-card-title>
     </ion-card-header>
       <ion-card-content>
       <ion-list>
 <ion-item-sliding *ngFor="let x of arregloProductos">
   <ion-item>
     <ion-label>
-      <p>Id : {{ x.id }}</p>
-      <p>Nombre : {{ x.nombre }}</p>
-      <p>Detalle : {{ x.detalle }}</p>
-      <p>Cantidad : {{ x.cantidad }}</p>
+      <p class="fuentes-cards">Id : {{ x.id }}</p>
+      <p class="fuentes-cards">Nombre : {{ x.nombre }}</p>
+      <p class="fuentes-cards">Detalle : {{ x.detalle }}</p>
+      <p class="fuentes-cards">Cantidad : {{ x.cantidad }}</p>
     </ion-label>
   </ion-item>
   <ion-item-options>
@@ -29,6 +29,6 @@
       </ion-card-content>
   </ion-card>
 
-  <ion-button fill="outline" expand="block" [routerLink]="['/agregar-producto']">Agregar Producto Nuevo</ion-button>
-  <ion-button fill="outline" expand="block" [routerLink]="['/home']">Atrás</ion-button>
+  <ion-button size="large" fill="outline" expand="block" [routerLink]="['/agregar-producto']">Agregar Producto Nuevo</ion-button>
+  <ion-button size="large" fill="outline" expand="block" [routerLink]="['/home']">Atrás</ion-button>
 </ion-content>
