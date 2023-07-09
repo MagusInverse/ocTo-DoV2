@@ -1,0 +1,7 @@
+{
+  "name": "OcTo-Do",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

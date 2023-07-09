@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Modificar Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating" class="labels"><ion-icon name="receipt-outline"></ion-icon>Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" class="labels"><ion-icon name="receipt-outline"></ion-icon>Detalle</ion-label>
+        <ion-input type="text" [(ngModel)]="detalle"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" class="labels"><ion-icon name="receipt-outline"></ion-icon>Cantidad</ion-label>
+        <ion-input type="number" [(ngModel)]="cantidad"></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <br>
+    <ion-button  expand="block" color="dark" class="labels" (click)="modificar()"><ion-icon name="checkmark-done-outline"></ion-icon>Modificar</ion-button>
+    <ion-button  expand="block" color="dark" class="labels"  [routerLink]="['/listado']"><ion-icon name="return-up-back-outline"></ion-icon></ion-button>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blonk-Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button fill="outline" expand="block" [routerLink]="['/pendientes']">To-Do</ion-button>
+  <ion-button fill="outline" expand="block" (click)="listado()">Listado</ion-button>
+  <ion-button fill="outline" expand="block" [routerLink]="['/mapa']">Mapa</ion-button>
+</ion-content>
