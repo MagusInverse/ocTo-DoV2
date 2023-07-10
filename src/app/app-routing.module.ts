@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'modificar-tarea',
     loadChildren: () => import('./modificar-tarea/modificar-tarea.module').then( m => m.ModificarTareaPageModule)
   },
+  {
+    path: 'clima',
+    loadChildren: () => import('./clima/clima.module').then( m => m.ClimaPageModule)
+  },
 ];
 
 @NgModule({

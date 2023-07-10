@@ -1,0 +1,43 @@
+<br>
+<ion-content [fullscreen]="true">
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating" class="labels"><ion-icon name="person-outline" ></ion-icon> Ingresa Ciudad</ion-label>
+        <ion-input placeholder="Escribe aqui" [(ngModel)]="ciudad"></ion-input>
+      </ion-item>
+      <ion-button expand="block" class="labels fuentes-card" (click)="buscar()">Buscar</ion-button>
+      <br>
+      <p>El clima está por defecto en Santiago de Chile</p>
+      <ion-item>
+        <ion-label>Clima: {{ clima }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Descripción: {{ descripcion }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tº Máx: {{ tempmax }}º</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tº Min: {{ tempmin }}º</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Humedad: {{ humedad }}%</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Velocidad del Viento: {{ velviento }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>msnm: {{ msnm }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+    <ion-button expand="block" class="labels fuentes-card" [routerLink]="['/home']">Atrás</ion-button>
+  </ion-card>
+</ion-content>
