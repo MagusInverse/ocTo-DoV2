@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <br>
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
+  <br>
+  <ion-card >
+    <ion-card-content>
+      <ion-title class="ion-text-center labels fuentes-cards">Market</ion-title>
+        <ion-list>
+          <ion-item *ngFor="let x of arregloFood">
+            <ion-label>
+              <p style="word-wrap: break-word;white-space: normal;">Nombre: {{ x.nombre }}</p>
+            </ion-label>
+            <ion-label>
+              <p style="word-wrap: break-word;white-space: normal;">Tipo cocina: {{ x.tipo_cocina }}</p>
+            </ion-label>
+            <ion-label>
+              <p style="word-wrap: break-word;white-space: normal;">Receta: {{ x.shareAS }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <div class="boton">
+          <ion-button size="large" fill="outline" expand="block" [routerLink]="['/login']">Salir</ion-button>
+          <ion-button size="large" expand="block" class="labels fuentes-card" [routerLink]="['/home']">Atrás</ion-button>
+        </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

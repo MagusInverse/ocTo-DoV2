@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -43,6 +43,19 @@ const routes: Routes = [
     path: 'clima',
     loadChildren: () => import('./clima/clima.module').then( m => m.ClimaPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },  {
+    path: 'market',
+    loadChildren: () => import('./market/market.module').then( m => m.MarketPageModule)
+  },
+
+
 ];
 
 @NgModule({

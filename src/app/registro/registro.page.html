@@ -1,0 +1,39 @@
+<ion-content >
+  <br>
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
+  <br>
+  <ion-card >
+    <ion-card-content>
+    <ion-title class="ion-text-center labels fuentes-cards">Registro</ion-title>
+        <ion-item>
+          <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="caret-forward-outline"></ion-icon> Usuario</ion-label>
+          <ion-input [(ngModel)]="usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="caret-forward-outline"></ion-icon> Password</ion-label>
+          <ion-input [(ngModel)]="clave"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="caret-forward-outline"></ion-icon> Repita password</ion-label>
+          <ion-input [(ngModel)]="clave2"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="caret-forward-outline"></ion-icon> Nombre</ion-label>
+          <ion-input [(ngModel)]="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="caret-forward-outline"></ion-icon> Apellido</ion-label>
+          <ion-input [(ngModel)]="apellido"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="caret-forward-outline"></ion-icon> Email</ion-label>
+          <ion-input type="email" [(ngModel)]="mail"></ion-input>
+        </ion-item>
+      <br>
+      <div class="boton">
+        <ion-button size="large" (click)="insertar()" >Registrar</ion-button>
+        <ion-button size="large" fill="outline" [routerLink]="['/login']">Salir</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

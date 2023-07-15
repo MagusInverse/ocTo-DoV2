@@ -34,8 +34,7 @@ export class ListadoPage implements OnInit {
     this.router.navigate(['/modificar-producto'], productoEnviar);
   }
 
-  ngOnInit() {
-    
+  ngOnInit() {    
     this.servicioBD.dbState().subscribe(respuestaBD =>{
       if(respuestaBD){
         this.servicioBD.fetchProducto().subscribe(itemBD=>{

@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center fuentes-cards">Login</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="person-outline" ></ion-icon> Usuario</ion-label>
+        <ion-input placeholder="example" [(ngModel)]="usuario"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="floating" class="labels fuentes-cards"><ion-icon name="key-outline"></ion-icon> Password</ion-label>
+      <ion-input type="password" [(ngModel)]="clave" ></ion-input>
+    </ion-item>
+    <br>
+    </ion-card-content>
+    <br>
+    <ion-button expand="block" (click)="logeado()">Ingresar</ion-button>
+  <br>
+  <a href="#" [routerLink]="['/registro']" style="margin: 0 auto; display:block; text-align: center; color: rgb(6, 2, 68); font-size: 18px;" class="fuentes-cards">Registrate</a>
+  <br>
+  </ion-card>
+</ion-content>
