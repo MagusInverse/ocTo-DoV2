@@ -2,26 +2,23 @@
   <br>
   <ion-img class="imglogo" src="assets/image/logo01.jpg"></ion-img>
   <br>
-  <ion-card >
-    <ion-card-content>
+  <ion-card>
+      <br>
       <ion-title class="ion-text-center labels fuentes-cards">Market</ion-title>
+      <br> 
         <ion-list>
-          <ion-item *ngFor="let x of arregloFood">
-            <ion-label>
-              <p style="word-wrap: break-word;white-space: normal;">Nombre: {{ x.nombre }}</p>
-            </ion-label>
-            <ion-label>
-              <p style="word-wrap: break-word;white-space: normal;">Tipo cocina: {{ x.tipo_cocina }}</p>
-            </ion-label>
-            <ion-label>
-              <p style="word-wrap: break-word;white-space: normal;">Receta: {{ x.shareAS }}</p>
+          <ion-item>
+            <ion-label class="fuentes-cards">
+              <h2>Nombre: {{ nombre1 }}</h2>
+              <h2>Tipo de Cocina: {{ tipo_cocina1 }}</h2>
+              <h2>Enlace: {{ shareAS1 }}</h2>
             </ion-label>
           </ion-item>
         </ion-list>
-        <div class="boton">
-          <ion-button size="large" fill="outline" expand="block" [routerLink]="['/login']">Salir</ion-button>
-          <ion-button size="large" expand="block" class="labels fuentes-card" [routerLink]="['/home']">Atrás</ion-button>
-        </div>
-    </ion-card-content>
+        <br>
+    <div class="boton">
+      <ion-button size="large" fill="outline" expand="block" [routerLink]="['/login']">Salir</ion-button>
+      <ion-button size="large" expand="block" class="labels fuentes-card" [routerLink]="['/home']">Atrás</ion-button>
+    </div>
   </ion-card>
 </ion-content>

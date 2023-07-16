@@ -47,8 +47,13 @@ export class LoginPage implements OnInit {
   }
   
   logeado(){
+    console.log("entre al log shushetumare");
     for(let i = 0; i < this.arregloUsuarios.length; i++) {
+      console.log("for "+ i);
+      console.log(this.arregloUsuarios.length);
+      console.log(this.arregloUsuarios);
       if(this.arregloUsuarios[i].usuario === this.usuario && this.arregloUsuarios[i].clave === this.clave) {
+        console.log(this.arregloUsuarios[i].usuario + "--" + this.arregloUsuarios[i].clave);
         this.router.navigate(['/home']);
         break;
       }

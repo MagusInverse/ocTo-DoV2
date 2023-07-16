@@ -64,7 +64,7 @@ export class RegistroPage implements OnInit {
   }
 
   insertar(){    
-    this.servicioBD.insertarUsuario(this.nombre, this.apellido, this.mail, this.nivel_educ, this.clave);
+    this.servicioBD.insertarUsuario(this.nombre, this.apellido, this.mail, this.clave, this.usuario);
     this.registrar();
     this.servicioBD.presentToast("Usuario Creado");
   }

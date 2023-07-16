@@ -8,25 +8,14 @@ import { InterfazFood } from '../services/interfaz-food';
   styleUrls: ['./market.page.scss'],
 })
 export class MarketPage implements OnInit {
-  API_URL="https://api.edamam.com/api/food-database/v2/parser?app_id=3a3718f3";
-  API_KEY=" 57b3e5dbd0e5d2db79046b4af775f81f";
 
-  tipo_cocina = "";
-  imagen = "";
-  shareAS =""; //url de la receta
-  nombre = ""; //label
-
-  arregloFood: any = [
-    {
-      tipo_cocina:'',
-      shareAS:'',
-      nombre:''
-    }
-  ]
+  tipo_cocina1: any = "";
+  shareAS1 =""; 
+  nombre1 = ""; 
 
   constructor(public  httpClient : HttpClient) { 
-    this.buscar()
     this.loadData()
+    this.obtenerReceta()
   }
 
   ngOnInit(){}
@@ -43,21 +32,18 @@ export class MarketPage implements OnInit {
     })
   }
 
-  buscar(){
-    this.obtenerReceta();
-  }
-
   obtenerReceta():void{
     this.getApi().subscribe((data: InterfazFood)=>{
+      this.nombre1 = data.hits[0].recipe.label;
+      this.shareAS1 = data.hits[0].recipe.shareAs;
+      this.tipo_cocina1 = data.hits[0].recipe.cuisineType;
       console.log("obtener receta inicio" + data.hits[0].recipe.label);
       for(let i = 0; i < data.hits.length; i++){
-        this.arregloFood.push(data.hits[0].recipe.cuisineType[0]);
-        this.arregloFood.push(data.hits[0].recipe.shareAs);
-        this.arregloFood.push(data.hits[0].recipe.label);
-        console.log("obtener receta" + this.arregloFood[0].nombre);
+        console.log("titulos de recetas: " + data.hits[i].recipe.label);
+        console.log("tipo de cocina de recetas: " + data.hits[i].recipe.cuisineType);
+        console.log("url de recetas: " + data.hits[i].recipe.shareAs);
       }
     });
-    
   }
 
 }

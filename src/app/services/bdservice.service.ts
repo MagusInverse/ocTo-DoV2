@@ -33,7 +33,7 @@ export class BdserviceService {
                          
   registroProducto: string = "INSERT OR IGNORE INTO PRODUCTO (id, nombre, detalle, cantidad) VALUES(1, 'BEBIDA', 'BEBIDA DE FANTASIA SABOR COLA', 4);";
   registroTarea: string = "INSERT OR IGNORE INTO TAREA (id, titulo, detalle) VALUES(1, 'Compras', 'hacer lista supermercado');";
-  registrarUsuario: string = "INSERT OR IGNORE INTO USUARIO(ID_USER, NOMBRE, APELLIDO, MAIL, NIVEL_EDUC, CLAVE, USER) VALUES(0,'Felix','Donoso', 'fe.donoso@duocuc.cl', 'universitaria', '12345', 'fdonoso');" ;
+  registrarUsuario: string = "INSERT OR IGNORE INTO USUARIO(ID_USER, NOMBRE, APELLIDO, MAIL, CLAVE, USER) VALUES(0,'Felix','Donoso', 'fe.donoso@duocuc.cl', '12345', 'fdonoso');" ;
 
   listaProducto = new BehaviorSubject([]);
   listaTarea = new BehaviorSubject([]);
